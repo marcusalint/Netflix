@@ -5,11 +5,11 @@ import App from './app';
 import {GlobalStyles} from './global-styles';
 
 render(
-<>
-  <GlobalStyles />
-  <App />
-</>,
-document.getElementById('root')
+  <>
+    <GlobalStyles />
+    <App />
+  </>,
+  document.getElementById('root')
 );
 
 
