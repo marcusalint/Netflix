@@ -5,7 +5,10 @@ import App from './app';
 import {GlobalStyles} from './global-styles';
 
 render(
-<><GlobalStyles /><App /></>,
+<>
+  <GlobalStyles />
+  <App />
+</>,
 document.getElementById('root')
 );
 
