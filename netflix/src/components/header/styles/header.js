@@ -8,7 +8,7 @@ export const Background = styled.div`
     no-repeat;
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
-  }
+}
 `;
 
 export const Container = styled.div`
