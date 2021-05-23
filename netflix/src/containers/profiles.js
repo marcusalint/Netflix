@@ -1,9 +1,13 @@
 import React from 'react';
 import {Header } from  '../components';
+import { Profiles } from  '../components';
 import * as ROUTES from '../constants/routes';
 import logo from '../logo.svg';
 
+
 export function SelectProfileContainer({user, setProfile}) {
+
+  console.log(user, 'user')
   return (
     <>
       <Header bg={false}>
@@ -13,9 +17,12 @@ export function SelectProfileContainer({user, setProfile}) {
       </Header>
 
       <Profiles>
-        <Profile.Title>Who's watching</Profile.Title>
+        <Profiles.Title>Who's watching</Profiles.Title>
         <Profiles.List>
-          <Profiles.User>
+          <Profiles.User onClick={() => setProfile({
+            displayName: user.displayName,
+            photoUrl: user.photoURL
+            })}>
             <Profiles.Picture src={user.photoURL} alt='user photo' />
             <Profiles.Name>{user.displayName}</Profiles.Name>
           </Profiles.User>
