@@ -24,9 +24,8 @@ export  function BrowseContainer({slides}) {
   }, [profile.displayName]);
 
   useEffect(() => {
-    setSlideRows(slides[category])
-    console.log(slideRows, 'this is slideRows')
-
+    console.log(slides, 'this is slides')
+    setSlideRows(slides[category]);
   }, [slides, category]);
 
 
@@ -91,12 +90,20 @@ export  function BrowseContainer({slides}) {
                 <Card.Item key={item.docId} item={item}>
                 <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                 <Card.Meta>
-              <Card.SubTitle>{item.subTitle}</Card.SubTitle>
+                  <Card.SubTitle>{item.subTitle}</Card.SubTitle>
                   <Card.Text>{item.description}</Card.Text>
                 </Card.Meta>
                 </Card.Item>
               ))}
             </Card.Entities>
+            <Card.Feature category={category}>
+              {/* <Player>
+                <Player.Button />
+                <Player.Video src="/videos/bunny.mp4" />
+              </Player>
+               */}
+
+            </Card.Feature>
           </Card>
         ))}
       </Card.Group>
