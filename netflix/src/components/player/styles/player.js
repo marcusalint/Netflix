@@ -32,7 +32,7 @@ export const Close = styled.button`
   top: 15px;
   width: 22px;
   height: 22px;
-  opacity: 0.3;
+  opacity: 0.6;
   background-color: transparent;
   border: 0;
   cursor: pointer;
