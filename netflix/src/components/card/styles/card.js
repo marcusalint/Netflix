@@ -129,6 +129,7 @@ export const FeatureText = styled.p`
   }
 `;
 
+
 export const Feature = styled.div`
   display: flex;
   flex-direction: row;
