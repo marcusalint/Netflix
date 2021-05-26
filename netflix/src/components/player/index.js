@@ -6,7 +6,7 @@ import {
   Overlay,
   Inner,
   Close
-} from './stylea/player'
+} from './styles/player'
 
 export const PlayerContext = createContext();
 
@@ -16,13 +16,13 @@ export default function Player({children, ...restProps}) {
   
   return(
     <PlayerContext.Provider value={{showPlayer, setShowPlayer}}>
-      <Continaer {...restProps}>{children}</Continaer>
+      <Container {...restProps}>{children}</Container>
 
     </PlayerContext.Provider>
   )
-}
+};
 
-Player.Video = function PlayerVide({src, ...restProps }) {
+Player.Video = function PlayerVideo({src, ...restProps }) {
   const {showPlayer, setShowPlayer} = useContext(PlayerContext)
 
   return showPlayer ? ReactDOM.createPortal(
@@ -31,8 +31,20 @@ Player.Video = function PlayerVide({src, ...restProps }) {
         <video id="netflix-player" controls>
           <source src={src} type="video/mp4" />
         </video>
+        <Close />
       </Inner>
-    </Overlay>
-  )
+    </Overlay>,
+    document.body
+  ) : null;
 
+};
+
+Player.Button = function PlayerButton({...restProps}) {
+  const {showPlayer, setShowPlayer} = useContext(PlayerContext);
+
+  return (
+    <Button onClick={() => setShowPlayer(true)}>
+      Play
+    </Button>
+  )
 }
