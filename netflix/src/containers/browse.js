@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import {SelectProfileContainer} from './profiles';
+import {FooterContainer} from './footer'
 import {FirebaseContext} from '../context/firebase';
 import { Card, Loading, Header } from '../components';
 import * as ROUTES from '../constants/routes';
@@ -90,7 +91,7 @@ export  function BrowseContainer({slides}) {
                 <Card.Item key={item.docId} item={item}>
                 <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                 <Card.Meta>
-                  <Card.SubTitle>{item.subTitle}</Card.SubTitle>
+                  <Card.SubTitle>{item.title}</Card.SubTitle>
                   <Card.Text>{item.description}</Card.Text>
                 </Card.Meta>
                 </Card.Item>
@@ -107,6 +108,7 @@ export  function BrowseContainer({slides}) {
           </Card>
         ))}
       </Card.Group>
+      <FooterContainer/>
     </>
     ) : (
     <SelectProfileContainer user={user} setProfile={setProfile}/>
