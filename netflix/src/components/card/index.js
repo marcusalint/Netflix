@@ -71,3 +71,7 @@ Card.Item = function CardItem({ item, children, ...restProps }) {
     </Item>
   );
 };
+
+Card.Image = function CardImage({ ...restProps }) {
+  return <Image {...restProps} />;
+};
