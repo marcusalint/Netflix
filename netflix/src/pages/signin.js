@@ -40,6 +40,11 @@ export default function Signin() {
           <Form.Title>Sign in</Form.Title>
           {error && <Form.Error>{error}</Form.Error>}
           <Form.Base onSubmit={handleSignIn} method="POST">
+          <Form.Text>
+              <p>For easy demoing purposes you can use the following to login</p>
+              <p>test@gmail.com</p>
+              <p>123456</p>
+            </Form.Text>
             <Form.Input
               placeholder="Email Address"
               value={emailAddress}
@@ -54,6 +59,9 @@ export default function Signin() {
             <Form.Submit disabled={isInvalid} type="submit">
               Sign In
             </Form.Submit>
+            <Form.Text>
+              Don't have an account? <Form.Link to="/signup">Sign up Now!</Form.Link>
+            </Form.Text>
           </Form.Base>
         </Form>
       </HeaderContainer>
