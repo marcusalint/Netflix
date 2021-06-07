@@ -15,7 +15,7 @@ export default function Home() {
           <Feature.Title>Unlimited films, TV Programs and more.</Feature.Title>
           <Feature.SubTitle>Watch anywhere. Cancel at any time.</Feature.SubTitle>
           <OptForm>
-            <OptForm.input placeholder="Email Address" />
+            <OptForm.input placeholder="Email Address (Click Sign In top right corner to demo)" />
             <OptForm.Button>Try it Now</OptForm.Button>
             <OptForm.Text>
                 Ready to watch? Enter your email to create or restart your membership.
