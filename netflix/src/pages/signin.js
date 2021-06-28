@@ -41,9 +41,9 @@ export default function Signin() {
           {error && <Form.Error>{error}</Form.Error>}
           <Form.Base onSubmit={handleSignIn} method="POST">
           <Form.Text>
-              <p>For easy demoing purposes you can use the following to login</p>
-              <p>test@gmail.com</p>
-              <p>123456</p>
+              <p style={{color: 'white'}}>For easy demoing purposes you can use the following to login:</p>
+              <p style={{color: 'red'}}>test@gmail.com</p>
+              <p style={{color: 'red'}}>123456</p>
             </Form.Text>
             <Form.Input
               placeholder="Email Address"

@@ -7,7 +7,7 @@ import logo from '../logo.svg';
 
 export function SelectProfileContainer({user, setProfile}) {
 
-  console.log(user, 'user')
+  
   return (
     <>
       <Header bg={false}>

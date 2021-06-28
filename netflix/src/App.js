@@ -9,7 +9,7 @@ import * as ROUTES from './constants/routes';
 
 export default function App() {
   const {user} = useAuthListener();
-  console.log(user)
+  
 
   return (
     <Router>
