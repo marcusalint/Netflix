@@ -10,7 +10,6 @@ export const Container = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column;
     align-items: center;
-    
   }
 `;
 
@@ -68,7 +67,6 @@ export const Text = styled.p`
   text-align: center;
   margin-left: 1em;
    
-
   @media (max-width: 600px) {
     font-size: 16px;
     line-height: 22px;
