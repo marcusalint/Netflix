@@ -31,7 +31,6 @@ export function BrowseContainer({ slides }) {
   useEffect(() => {
     const fuse = new Fuse(slideRows, { keys: ['data.title', 'data.description', 'data.genre'] });
     const results = fuse.search(searchTerm).map((item) => item);
-    console.log(fuse.search(searchTerm).map((item) => item.data), 'console log on 34');
 
     if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
       setSlideRows(results);
@@ -44,7 +43,6 @@ export function BrowseContainer({ slides }) {
   return profile.displayName ? (
     <>
       {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
-
       <Header src="queensgambit" dontShowOnSmallViewPort>
         <Header.Frame>
           <Header.Group>
